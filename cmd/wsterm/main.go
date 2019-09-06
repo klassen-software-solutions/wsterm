@@ -4,14 +4,15 @@
 //
 // Created by steve on 2019-08-29.
 // Copyright © 2019 Klassen Software Solutions. All rights reserved.
+// Permission is hereby granted for use under the MIT License (https://opensource.org/licenses/MIT).
 //
 
 package main
 
 import (
-	"fmt"
 	"github.com/docopt/docopt-go"
 	"github.com/klassen-software-solutions/wsterm"
+	"github.com/klassen-software-solutions/wsterm/internal/pkg/terminal"
 	"log"
 	"os"
 )
@@ -38,11 +39,15 @@ Examples:
 )
 
 func main() {
-	_, err := docopt.ParseArgs(usage, os.Args[1:], wsterm.Version)
+	opts, err := docopt.ParseArgs(usage, os.Args[1:], wsterm.Version)
 	if err != nil {
 		log.Fatalf("error parsing arguments: %v", err)
 	}
 
-	fmt.Printf("starting...\n")
-
+	t := terminal.NewTerminal(opts)
+	err = t.Run()
+	if err != nil {
+		_ = os.Stdout.Sync()
+		log.Fatalf("error running: %v", err)
+	}
 }
