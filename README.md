@@ -1,4 +1,6 @@
 # wsterm
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fklassen-software-solutions%2Fwsterm.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fklassen-software-solutions%2Fwsterm?ref=badge_shield)
+
 Text based WebSocket testing utility written in Go
 
 ## Contributing
@@ -13,3 +15,7 @@ contribute to the project. If you do, there are a number of policies you should 
 * Projects are created based on conversations on the wiki.
 * Feel free to initiate or join conversations on the wiki.
 * Follow our [Go Coding Standards](https://www.kss.cc/standards/go.html).
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fklassen-software-solutions%2Fwsterm.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fklassen-software-solutions%2Fwsterm?ref=badge_large)
